@@ -1,6 +1,7 @@
 // @flow
 import * as React from "react";
 import styled from "styled-components";
+import DiscordLogo from "./DiscordLogo";
 import GoogleLogo from "./GoogleLogo";
 import MicrosoftLogo from "./MicrosoftLogo";
 import SlackLogo from "./SlackLogo";
@@ -28,6 +29,12 @@ function AuthLogo({ providerName, size = 16 }: Props) {
       return (
         <Logo>
           <MicrosoftLogo size={size} />
+        </Logo>
+      );
+    case "discord":
+      return (
+        <Logo>
+          <DiscordLogo size={size} />
         </Logo>
       );
     default:
