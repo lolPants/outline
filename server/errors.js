@@ -75,6 +75,12 @@ export function MaximumTeamsError(
   return httpErrors(400, message, { id: "maximum_teams" });
 }
 
+export function DiscordInvalidGuildError(
+  message: string = "You are not in the required Discord guild"
+) {
+  return httpErrors(400, message, { id: "guild_not_allowed" });
+}
+
 export function EmailAuthenticationRequiredError(
   message: string = "User must authenticate with email",
   redirectUrl: string = env.URL
